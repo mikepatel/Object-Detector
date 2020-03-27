@@ -15,6 +15,7 @@ BLACK = [0, 0, 0]
 RADIUS = 7
 DRAW = False
 LAST_POS = (0, 0)
+DONE = False
 
 
 ################################################################################
@@ -31,21 +32,6 @@ def roundline(surface, color, start, end, radius=1):
         pygame.draw.circle(surface, color, (x, y), radius)
 
 
-# crope
-def crope(original):
-    cropped = pygame.Surface((SCREEN_WIDTH-5, SCREEN_HEIGHT-5))
-    cropped.blit(original, (0, 0), (0, 0, SCREEN_WIDTH-5, SCREEN_HEIGHT-5))
-    return cropped
-
-
-# show output image
-def show_output_image(image):
-    surface = pygame.pixelcopy.make_surface(image)
-    surface = pygame.transform.rotate(surface, -270)
-    surface = pygame.transform.flip(surface, 0, 1)
-    screen.blit(surface, (SCREEN_WIDTH+2, 0))
-
-
 ################################################################################
 # Main
 if __name__ == "__main__":
@@ -54,16 +40,13 @@ if __name__ == "__main__":
     # set up drawing window
     screen = pygame.display.set_mode(size=[SCREEN_WIDTH, SCREEN_HEIGHT])
 
-    running = True
-    points = []
-
-    while running:
+    while not DONE:
         for event in pygame.event.get():
             # close window button
             if event.type == pygame.QUIT:
-                running = False
+                DONE = True
 
-            # draw using mouse
+            # start drawing using mouse
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pygame.draw.circle(screen, WHITE, event.pos, RADIUS)
                 DRAW = True
@@ -78,6 +61,8 @@ if __name__ == "__main__":
             # stop drawing
             if event.type == pygame.MOUSEBUTTONUP:
                 DRAW = False
+
+                # save current screen image to feed into classifier
 
             pygame.display.flip()
 
