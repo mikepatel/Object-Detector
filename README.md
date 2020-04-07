@@ -14,7 +14,8 @@ conda 4.8.2
 ```
 3. Create a new Anaconda virtual environment
 ```
-$ conda create -n test pip python=3.7                                                                                Collecting package metadata (current_repodata.json): done
+$ conda create -n test pip python=3.7                                                                                
+Collecting package metadata (current_repodata.json): done
 Solving environment: done
 
 
