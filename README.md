@@ -5,6 +5,8 @@
 ## File Descriptions
 
 ## Instructions
+### Install Anaconda
+1. [Download Anaconda](https://www.anaconda.com/distribution/)
 
 ### Run App
 
