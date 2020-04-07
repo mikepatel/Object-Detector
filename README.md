@@ -1,12 +1,10 @@
 # Object-Detector
-Basic object detector using PC webcam
-
-## Data
+* Basic object detector using PC webcam
+* Using TensorFlow pretrained model
 
 ## File Descriptions
 
 ## Instructions
-### Train Model
 
 ### Run App
 
