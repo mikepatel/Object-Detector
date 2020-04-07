@@ -12,7 +12,7 @@
 $ conda --version                                                                                                    
 conda 4.8.2
 ```
-3. Create a new Anaconda virtual environment
+3. Create a new Anaconda virtual environment (e.g. test)
 ```
 $ conda create -n test pip python=3.7                                                                                
 Collecting package metadata (current_repodata.json): done
@@ -83,6 +83,12 @@ Executing transaction: done
 # To deactivate an active environment, use
 #
 #     $ conda deactivate
+```
+4. Activate the new virtual environment. You'll see the name of the virtual environment in parentheses.
+```
+$ activate test
+
+(test) $
 ```
 
 ### Run App
