@@ -90,6 +90,7 @@ $ activate test
 
 (test) $
 ```
+5. Install Python packages in the virtual environment using Pip
 
 ### Run App
 
