@@ -3,6 +3,10 @@
 * Using TensorFlow pretrained model
 
 ## File Descriptions
+* [app.py](https://github.com/mikepatel/Object-Detector/blob/master/app.py) - for running model
+* [model.py](https://github.com/mikepatel/Object-Detector/blob/master/model.py) - for model definitions
+* [parameters.py](https://github.com/mikepatel/Object-Detector/blob/master/parameters.py) - for model and training parameters
+* [training.py](https://github.com/mikepatel/Object-Detector/blob/master/train.py) - for model preprocessing and training
 
 ## Instructions
 ### Anaconda
